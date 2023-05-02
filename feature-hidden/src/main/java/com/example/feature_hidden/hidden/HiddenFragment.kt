@@ -1,4 +1,4 @@
-package com.example.feature_hidden.dashboard
+package com.example.feature_hidden.hidden
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,10 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.feature_hidden.R
 import com.example.feature_hidden.databinding.FragmentHiddenBinding
 
-class HiddenFragment2 : Fragment() {
+class HiddenFragment : Fragment() {
+//    private val args: HiddenFragmentArgs by navArgs()
 
     private var _binding: FragmentHiddenBinding? = null
 
@@ -31,12 +33,16 @@ class HiddenFragment2 : Fragment() {
         val root: View = binding.root
 
         val textView: TextView = binding.textHidden
-        hiddenViewModel.resetText("This is hidden Fragment 2 ~~~~")
         hiddenViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        // Get the adminId from the arguments
+//        val adminId = args.adminId
+//        hiddenViewModel.resetText("Get adminId: $adminId")
+
         binding.textHidden.setOnClickListener {
-            findNavController().navigate(R.id.action_hiddenFragment2_to_hiddenFragment3)
+            findNavController().navigate(R.id.action_hiddenFragment_to_hiddenFragment2)
         }
         return root
     }

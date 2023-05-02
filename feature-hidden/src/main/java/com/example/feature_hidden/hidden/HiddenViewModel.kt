@@ -1,4 +1,4 @@
-package com.example.feature_hidden.dashboard
+package com.example.feature_hidden.hidden
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

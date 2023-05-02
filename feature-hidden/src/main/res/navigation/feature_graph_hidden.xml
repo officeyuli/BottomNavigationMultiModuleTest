@@ -6,15 +6,21 @@
 
     <fragment
         android:id="@+id/hiddenFragment"
-        android:name="com.example.feature_hidden.dashboard.HiddenFragment"
+        android:name="com.example.feature_hidden.hidden.HiddenFragment"
         android:label="HiddenFragment" >
         <action
             android:id="@+id/action_hiddenFragment_to_hiddenFragment2"
             app:destination="@id/hiddenFragment2" />
+
+<!--        <argument-->
+<!--            android:name="adminId"-->
+<!--            app:argType="string" />-->
+
+        <deepLink app:uri="@string/admin_deep_link" />
     </fragment>
     <fragment
         android:id="@+id/hiddenFragment2"
-        android:name="com.example.feature_hidden.dashboard.HiddenFragment2"
+        android:name="com.example.feature_hidden.hidden.HiddenFragment2"
         android:label="HiddenFragment2" >
         <action
             android:id="@+id/action_hiddenFragment2_to_hiddenFragment3"
@@ -22,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/hiddenFragment3"
-        android:name="com.example.feature_hidden.dashboard.HiddenFragment3"
+        android:name="com.example.feature_hidden.hidden.HiddenFragment3"
         android:label="HiddenFragment3" >
         <action
             android:id="@+id/action_hiddenFragment3_to_hiddenFragment"

@@ -1,4 +1,4 @@
-package com.example.feature_hidden.dashboard
+package com.example.feature_hidden.hidden
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.feature_hidden.R
 import com.example.feature_hidden.databinding.FragmentHiddenBinding
 
-class HiddenFragment3 : Fragment() {
+class HiddenFragment2 : Fragment() {
 
     private var _binding: FragmentHiddenBinding? = null
 
@@ -31,12 +31,12 @@ class HiddenFragment3 : Fragment() {
         val root: View = binding.root
 
         val textView: TextView = binding.textHidden
-        hiddenViewModel.resetText("This is hidden Fragment 3 ~~~~")
+        hiddenViewModel.resetText("This is hidden Fragment 2 ~~~~")
         hiddenViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         binding.textHidden.setOnClickListener {
-            findNavController().navigate(R.id.action_hiddenFragment3_to_hiddenFragment)
+            findNavController().navigate(R.id.action_hiddenFragment2_to_hiddenFragment3)
         }
         return root
     }

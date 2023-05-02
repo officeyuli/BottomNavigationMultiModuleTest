@@ -1,5 +1,6 @@
 package com.example.feature_dashboard.dashboard
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavDeepLinkRequest
+import androidx.navigation.fragment.findNavController
+import com.example.feature_dashboard.R
 import com.example.feature_dashboard.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -31,6 +35,17 @@ class DashboardFragment : Fragment() {
         val textView: TextView = binding.textDashboard
         dashboardViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
+        }
+
+        binding.textDashboard.setOnClickListener {
+            val deeplink =
+                NavDeepLinkRequest.Builder.fromUri(
+                    Uri.parse(
+                        getString(R.string.admin_deep_link)
+                    )
+                )
+                    .build()
+            findNavController().navigate(deeplink)
         }
         return root
     }

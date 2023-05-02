@@ -3,4 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_hidden">Hidden</string>
+    <string name="admin_deep_link" translatable="false">myProject://com.molidev8.myProject/admin/</string>
+
 </resources>

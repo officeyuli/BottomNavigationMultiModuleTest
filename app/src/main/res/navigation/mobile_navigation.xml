@@ -20,4 +20,9 @@
         android:id="@+id/navigation_notifications"
         android:label="@string/title_notifications"
         app:graph="@navigation/feature_graph_notification" />
+
+    <include
+        android:id="@+id/navigation_hidden"
+        android:label="@string/title_hidden"
+        app:graph="@navigation/feature_graph_hidden" />
 </navigation>
