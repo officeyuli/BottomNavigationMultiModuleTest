@@ -36,7 +36,13 @@ class HiddenFragment3 : Fragment() {
             textView.text = it
         }
         binding.textHidden.setOnClickListener {
-            findNavController().navigate(R.id.action_hiddenFragment3_to_hiddenFragment)
+            val adminId = "3To1"
+            //如果沒有defaultValue , 則會變成建構參數
+            //若有設定defaultValue , 則呼叫setter
+            val action = HiddenFragment3Directions.actionHiddenFragment3ToHiddenFragment().apply {
+                setAdminId(adminId)
+            }
+            findNavController().navigate(action)
         }
         return root
     }

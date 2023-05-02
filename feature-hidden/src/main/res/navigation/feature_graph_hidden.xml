@@ -12,9 +12,11 @@
             android:id="@+id/action_hiddenFragment_to_hiddenFragment2"
             app:destination="@id/hiddenFragment2" />
 
-<!--        <argument-->
-<!--            android:name="adminId"-->
-<!--            app:argType="string" />-->
+        <argument
+            android:name="adminId"
+            app:argType="string"
+            android:defaultValue="default_admin_id"
+            />
 
         <deepLink app:uri="@string/admin_deep_link" />
     </fragment>
@@ -32,6 +34,12 @@
         android:label="HiddenFragment3" >
         <action
             android:id="@+id/action_hiddenFragment3_to_hiddenFragment"
-            app:destination="@id/hiddenFragment" />
+            app:destination="@id/hiddenFragment" >
+            <argument
+                android:name="adminId"
+                app:argType="string"
+                android:defaultValue="three_to_one_default"
+                />
+        </action>
     </fragment>
 </navigation>

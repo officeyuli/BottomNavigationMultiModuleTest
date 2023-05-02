@@ -41,7 +41,9 @@ class DashboardFragment : Fragment() {
             val deeplink =
                 NavDeepLinkRequest.Builder.fromUri(
                     Uri.parse(
-                        getString(R.string.admin_deep_link)
+                        getString(R.string.admin_deep_link).replace("{adminId}",
+                            "Yuli's Id"
+                        )
                     )
                 )
                     .build()

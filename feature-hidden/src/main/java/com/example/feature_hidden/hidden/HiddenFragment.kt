@@ -13,7 +13,7 @@ import com.example.feature_hidden.R
 import com.example.feature_hidden.databinding.FragmentHiddenBinding
 
 class HiddenFragment : Fragment() {
-//    private val args: HiddenFragmentArgs by navArgs()
+    private val args: HiddenFragmentArgs by navArgs()
 
     private var _binding: FragmentHiddenBinding? = null
 
@@ -37,9 +37,9 @@ class HiddenFragment : Fragment() {
             textView.text = it
         }
 
-        // Get the adminId from the arguments
-//        val adminId = args.adminId
-//        hiddenViewModel.resetText("Get adminId: $adminId")
+//         Get the adminId from the arguments
+        val adminId = args.adminId
+        hiddenViewModel.resetText("Get adminId: $adminId")
 
         binding.textHidden.setOnClickListener {
             findNavController().navigate(R.id.action_hiddenFragment_to_hiddenFragment2)

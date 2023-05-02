@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="admin_deep_link" translatable="false">myProject://com.molidev8.myProject/admin/</string>
+    <string name="admin_deep_link" translatable="false">myProject://com.molidev8.myProject/admin/{adminId}</string>
 
 
 </resources>
